@@ -26,7 +26,7 @@ jobs:
       - name: docker login
         uses: docker/login-action@v2
         with:
-          registry: ${{ input.REPO }}
+          registry: ${{ env.REPO }}
           username: ${{ steps.secrets.outputs.USERNAME }}
           password: ${{ steps.secrets.outputs.PASSWORD }}    
       # - name: Import Secrets
