@@ -21,7 +21,14 @@ jobs:
           roleId: ${{ secrets.VAULT_ROLE_ID }}
           secretId: ${{ secrets.VAULT_SECRET_ID }}
           secrets: |
-            kv/data/${{ env.REPO }}/v1 bansodesatish | PASSWORD       
+            kv/data/${{ env.REPO }}/v2 username | USERNAME
+            kv/data/${{ env.REPO }}/v2 password | PASSWORD   
+      - name: docker login
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ input.REPO }}
+          username: ${{ steps.secrets.outputs.USERNAME }}
+          password: ${{ steps.secrets.outputs.PASSWORD }}    
       # - name: Import Secrets
       #   id: secrets
       #   uses: hashicorp/vault-action@v2.4.2
