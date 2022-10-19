@@ -15,6 +15,7 @@ jobs:
         with:
           url: https://vault.k8sdemo.tk
           method: approle
+          caCertificate: ${{ secrets.VAULT_CA_CERT }}
           roleId: ${{ secrets.VAULT_ROLE_ID }}
           secretId: ${{ secrets.VAULT_SECRET_ID }}
           secrets: |
