@@ -13,7 +13,7 @@ jobs:
       - name: Import Secrets
         uses: hashicorp/vault-action@v2.4.0
         with:
-          url: https://vault.k8s.tk
+          url: https://vault.k8sdemo.tk
           method: approle
           roleId: 14c14732-f3d1-b834-622d-d2502ce23373
           secretId: 0854d493-cff7-5111-e9a6-43a6f1d3417c
