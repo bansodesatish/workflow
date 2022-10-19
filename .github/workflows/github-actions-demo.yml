@@ -16,7 +16,7 @@ jobs:
           url: https://vault.k8sdemo.tk
           method: approle
           roleId: "14c14732-f3d1-b834-622d-d2502ce23373"
-          secretId: "0854d493-cff7-5111-e9a6-43a6f1d3417c"
+          secretId: "c687659a-798b-78db-a2ee-a9f20784938b"
           secrets: |
             kv/index.docker.io/v1 bansodesatish       
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
