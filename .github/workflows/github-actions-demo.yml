@@ -19,7 +19,7 @@ jobs:
           roleId: ${{ secrets.VAULT_ROLE_ID }}
           secretId: ${{ secrets.VAULT_SECRET_ID }}
           secrets: |
-            kv/index.docker.io/v1 bansodesatish | PASSWORD       
+            kv/data/index.docker.io/v1 bansodesatish | PASSWORD       
       # - name: Import Secrets
       #   id: secrets
       #   uses: hashicorp/vault-action@v2.4.2
