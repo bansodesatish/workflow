@@ -29,6 +29,15 @@ jobs:
           registry: ${{ env.REPO }}
           username: ${{ steps.secrets.outputs.USERNAME }}
           password: ${{ steps.secrets.outputs.PASSWORD }}    
+      - name: docker login custom action
+        uses: bansodesatish/actions/docker-login@main
+        with:
+          REPO: ${{ env.REPO }}
+          VAULT_ROLE_ID: ${{ secrets.VAULT_ROLE_ID }}
+          VAULT_SECRET_ID: ${{ secrets.VAULT_SECRET_ID }}
+      - name: docker pull outside
+        run: 'docker pull bansodesatish/kubectl:latest'
+        shell: bash
       # - name: Import Secrets
       #   id: secrets
       #   uses: hashicorp/vault-action@v2.4.2
