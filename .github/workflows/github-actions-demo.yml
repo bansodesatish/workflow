@@ -16,5 +16,5 @@ jobs:
           url: https://vault.k8sdemo.tk
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: |
-            kv/index.docker.io/v1 bansodesatish       
+            kv/data/index.docker.io/v1 bansodesatish       
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
