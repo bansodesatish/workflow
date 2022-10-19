@@ -21,7 +21,7 @@ jobs:
           roleId: ${{ secrets.VAULT_ROLE_ID }}
           secretId: ${{ secrets.VAULT_SECRET_ID }}
           secrets: |
-            kv/data/${{ env.REPO }}/v2 username | USERNAME
+            kv/data/${{ env.REPO }}/v2 username | USERNAME ;
             kv/data/${{ env.REPO }}/v2 password | PASSWORD   
       - name: docker login
         uses: docker/login-action@v2
