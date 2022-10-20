@@ -47,4 +47,4 @@ jobs:
       #     token: ${{ secrets.VAULT_TOKEN }}
       #     secrets: |
       #       kv/data/index.docker.io/v1 bansodesatish | PASSWORD   
-      - run: echo "🎉 The job was automatically by a ${{ github.event_name }} event. '${{ steps.secrets.outputs.PASSWORD }}'"
+      - run: docker images
