@@ -23,7 +23,7 @@ jobs:
       #     secrets: |
       #       kv/data/${{ env.REPO }}/v2 username | USERNAME ;
       #       kv/data/${{ env.REPO }}/v2 password | PASSWORD     
-      - name: docker login custom action - 1
+      - name: docker login custom action - 2
         uses: bansodesatish/actions/docker-login@main
         id: secrets
         with:
