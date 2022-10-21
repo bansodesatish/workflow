@@ -46,3 +46,17 @@ jobs:
       #     registry: ${{ env.DOCKER_REGISTRY }}
       #     username: ${{ steps.secrets.outputs.USERNAME }}
       #     password: ${{ steps.secrets.outputs.PASSWORD }}  
+
+
+      - name: docker pull outside
+        run: 'docker pull bansodesatish/kubectl:latest'
+        shell: bash
+      # - name: Import Secrets
+      #   id: secrets
+      #   uses: hashicorp/vault-action@v2.4.2
+      #   with:
+      #     url: https://vault.k8sdemo.tk
+      #     token: ${{ secrets.VAULT_TOKEN }}
+      #     secrets: |
+      #       kv/data/index.docker.io/v1 bansodesatish | PASSWORD   
+      - run: docker images
