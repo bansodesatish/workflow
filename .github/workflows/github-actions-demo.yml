@@ -5,7 +5,7 @@ env:
   DOCKER_REGISTRY: "index.docker.io"
 jobs:
   reusable-workflow:
-    uses: ./.github/workflows/docker-login.yaml@main
+    uses: ./.github/workflows/docker-login.yaml
     with:
       DOCKER_REGISTRY: ${{ env.DOCKER_REGISTRY }}
     secrets: 
