@@ -8,6 +8,9 @@ jobs:
     uses: ./.github/workflows/docker-login.yaml
     with:
       DOCKER_REGISTRY: "index.docker.io"
+      secrets: |
+        kv/index.docker.io/v2 username | USERNAME  ;
+        kv/index.docker.io/v2 password | PASSWORD 
     secrets: 
       VAULT_ROLE_ID: ${{ secrets.VAULT_ROLE_ID }}
       VAULT_SECRET_ID: ${{ secrets.VAULT_SECRET_ID }}

@@ -7,7 +7,10 @@ on:
         required: false
         type: string
         default: ''
-        
+      secrets: 
+        required: true
+        type: string 
+        default: ''
     secrets:
       VAULT_ROLE_ID:
         required: true 
@@ -38,6 +41,7 @@ jobs:
         id: secrets
         with:
           DOCKER_REGISTRY: ${{ inputs.DOCKER_REGISTRY }}
+          secrets: ${{ inputs.secrets }}
           VAULT_ROLE_ID: ${{ secrets.VAULT_ROLE_ID }}
           VAULT_SECRET_ID: ${{ secrets.VAULT_SECRET_ID }}
       # - name: docker login
